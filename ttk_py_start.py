@@ -42,6 +42,7 @@ class FileSearchEngine(ttk.Frame):
         self.venv_path_var_list = []
         self.py_path_combobox = None
         self.py_path_var_list = []
+        self.sub_close_py_name = ''
 
         self.setup_()
 
@@ -177,9 +178,18 @@ class FileSearchEngine(ttk.Frame):
         self.theme_name_combobox.pack(side=LEFT, pady=5)
         self.theme_name_combobox.bind("<<ComboboxSelected>>", self.change_base_theme)
 
+        close_btn = ttk.Button(
+            master=type_row,
+            text="停止py",
+            command=self.on_sub_close,
+            bootstyle=DANGER,
+            width=8
+        )
+        close_btn.pack(side=RIGHT, padx=5)
+
         clear_btn = ttk.Button(
             master=type_row,
-            text="重置",
+            text="清空",
             command=self.on_clear,
             bootstyle=DANGER,
             width=8
@@ -290,11 +300,15 @@ class FileSearchEngine(ttk.Frame):
         os.chdir(self.base_path)
         while True:
             try:
-                if self.is_select_py_is_run(py_path, cmd_):
+                select_flag, now_select_py = self.is_select_py_is_run(py_path, cmd_)
+                if select_flag:
                     line = sup.readline().encode('utf-8')
                     if line:
                         self.insert_row(line)
                     else:
+                        break
+                    if now_select_py in self.sub_close_py_name:
+                        self.sub_close_py_name = ''
                         break
                 else:
                     time.sleep(2)
@@ -309,7 +323,11 @@ class FileSearchEngine(ttk.Frame):
         now_select_py = self.py_path_var.get()
         py_file, py_path = self.get_py_file_and_path(now_select_py)
         if isinstance(now_select_py, str) and py_file in run_cmd_ and py_path in run_py_path:
-            return True
+            return True, now_select_py
+
+    def on_sub_close(self):
+        """close popen"""
+        self.sub_close_py_name = self.py_path_var.get()
 
     def os_system(self, cmd_, py_path):
         self.insert_row('cmd: ' + cmd_ + '\n')
