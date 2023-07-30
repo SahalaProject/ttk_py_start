@@ -324,6 +324,7 @@ class FileSearchEngine(ttk.Frame):
         py_file, py_path = self.get_py_file_and_path(now_select_py)
         if isinstance(now_select_py, str) and py_file in run_cmd_ and py_path in run_py_path:
             return True, now_select_py
+        return False, 'no select py'
 
     def on_sub_close(self):
         """close popen"""

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5983739-c7bb-4c48-b607-6dcd4063db69" name="变更" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tk_db.json" beforeDir="false" afterPath="$PROJECT_DIR$/tk_db.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ttk_py_start.py" beforeDir="false" afterPath="$PROJECT_DIR$/ttk_py_start.py" afterDir="false" />
     </list>
@@ -130,7 +131,7 @@
       <updated>1690550092634</updated>
       <workItem from="1690550094491" duration="18591000" />
       <workItem from="1690608347371" duration="18488000" />
-      <workItem from="1690647822271" duration="5013000" />
+      <workItem from="1690647822271" duration="6753000" />
     </task>
     <servers />
   </component>
@@ -145,12 +146,17 @@
           <line>69</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ttk_py_start.py</url>
+          <line>302</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ttk_py_start$1.coverage" NAME="1 覆盖结果" MODIFIED="1690639137150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/ttk_py_start$ttk_py_start.coverage" NAME="ttk_py_start 覆盖结果" MODIFIED="1690682360170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ttk_py_start$ttk_py_start.coverage" NAME="ttk_py_start 覆盖结果" MODIFIED="1690683022168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ttk_py_start$demo_.coverage" NAME="demo- 覆盖结果" MODIFIED="1690637163914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gui_file_search_main$file_search.coverage" NAME="file_search 覆盖结果" MODIFIED="1690608171729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/gui_file_search_main$__main__.coverage" NAME="__main__ 覆盖结果" MODIFIED="1690601454964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/venv/lib/python3.7/site-packages/ttkcreator" />
